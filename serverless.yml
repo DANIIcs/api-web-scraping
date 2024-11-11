@@ -12,7 +12,7 @@ provider:
 
 functions:
   scrape_table:
-    handler: scrap_table.lambda_handler  # Asegúrarse de que el nombre del archivo y la función coincidan
+    handler: scrap_table_hw.lambda_handler  # Asegúrarse de que el nombre del archivo y la función coincidan
     package:
       include:
         - ./**  # Incluir todo el contenido del directorio
@@ -28,7 +28,7 @@ resources:
     TablaWebScrapping:
       Type: AWS::DynamoDB::Table
       Properties:
-        TableName: TablaWebScrapping
+        TableName: TablaWebScrappingsismo
         AttributeDefinitions:
           - AttributeName: id
             AttributeType: S
